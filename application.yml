@@ -1,15 +1,14 @@
-server:
-	port: 8081
-	spring:
-	profiles:
-	active: prod
-‐‐‐
-server:
-	port: 8083
-	spring:
-	profiles: dev
-‐‐‐
-server:
-	port: 8084
-	spring:
-	profiles: prod #指定属于哪个环境
+spring:
+  profiles:
+    active:
+    - dev
+---
+spring:
+  profiles: dev
+  application:
+    name: springcloud-dev
+---
+spring:
+  profiles: test
+  application:
+    name: springcloud-test
